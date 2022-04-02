@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="titulo">00:00:00</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Flow+Block&family=Noto+Sans:wght@700&display=swap');
+
+  html,
+  body {
+    background: #000;
+    color: #FFF;
+  }
+
+  .centrado {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  #reloj,
+  #fecha {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+  }
+
+  #reloj {
+    font-size: 150px;
+  }
+
+  #fecha {
+    font-size: 50px;
+    color: #D2D2CF;
+  }
+</style>
+
+<body>
+  <div class="centrado">
+    <center>
+      <span id="reloj">00:00:00</span><br>
+      <span id="fecha">Jueves, 1 de Enero de 1970</span>
+    </center>
+  </div>
+</body>
+<script>
+  const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+  const dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+
+  setInterval(() => {
+    const hora = `${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}`;
+    document.getElementById("titulo").innerHTML = hora
+    document.getElementById("reloj").innerHTML = hora
+    document.getElementById("fecha").innerHTML = `${dias[new Date().getDay()]}, ${new Date().getDate()} de ${meses[new Date().getMonth()]} de ${new Date().getFullYear()}`;
+  }, 1000);
+</script>
+
+</html>
