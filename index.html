@@ -226,11 +226,12 @@
   </div>
 </body>
 <script>
-  const meses = ['Enero', 'Febrero', 'Marzo', 'Diciembre', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-  const dias = ['Miércoles', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+  const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+  const dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 
   setInterval(() => {
     const hora = `${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}`;
+    document.title = hora;
     document.getElementById("titulo").innerHTML = hora
     document.getElementById("reloj").innerHTML = hora
     document.getElementById("fecha").innerHTML = `${dias[new Date().getDay()]}, ${new Date().getDate()} de ${meses[new Date().getMonth()]} de ${new Date().getFullYear()}`;
