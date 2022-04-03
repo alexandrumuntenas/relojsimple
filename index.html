@@ -22,21 +22,68 @@
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    width: 100%;
   }
 
   #reloj,
   #fecha {
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
-  }
-
-  #reloj {
-    font-size: 150px;
+    transition: all 0.5s ease-in-out;
   }
 
   #fecha {
-    font-size: 50px;
     color: #D2D2CF;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #reloj {
+      font-size: 75px;
+    }
+
+    #fecha {
+      font-size: 25px;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    #reloj {
+      font-size: 100px;
+    }
+
+    #fecha {
+      font-size: 25px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    #reloj {
+      font-size: 150px;
+    }
+
+    #fecha {
+      font-size: 40px;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    #reloj {
+      font-size: 150px;
+    }
+
+    #fecha {
+      font-size: 50px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    #reloj {
+      font-size: 150px;
+    }
+
+    #fecha {
+      font-size: 50px;
+    }
   }
 
   @keyframes move {
