@@ -38,27 +38,27 @@
 
   @media only screen and (max-width: 600px) {
     #reloj {
-      font-size: 75px;
+      font-size: 50px;
     }
 
     #fecha {
-      font-size: 25px;
+      font-size: 15px;
     }
   }
 
   @media only screen and (min-width: 600px) {
     #reloj {
-      font-size: 100px;
+      font-size: 75px;
     }
 
     #fecha {
-      font-size: 25px;
+      font-size: 30px;
     }
   }
 
   @media only screen and (min-width: 768px) {
     #reloj {
-      font-size: 150px;
+      font-size: 100px;
     }
 
     #fecha {
@@ -226,8 +226,8 @@
   </div>
 </body>
 <script>
-  const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-  const dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+  const meses = ['Enero', 'Febrero', 'Marzo', 'Diciembre', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+  const dias = ['Miércoles', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 
   setInterval(() => {
     const hora = `${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}`;
